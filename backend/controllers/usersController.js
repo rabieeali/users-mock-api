@@ -19,7 +19,7 @@ const createNewUser = (req , res) => {
 
     // check for duplicate usernames in the db
     const duplicate = data.users.find(person => person.username === username);
-    if (duplicate) return res.sendStatus(409); //Conflict 
+    if (duplicate) return res.status(409).json({"message":"There's Already a User With This Username"}); //Conflict 
 
     
 
@@ -29,7 +29,7 @@ const createNewUser = (req , res) => {
         password
     }
 
-    if (!newUser.username || !newUser.password) return res.status(400).json({ 'message': 'username and password are required.' });
+    if (!newUser.username || !newUser.password) return res.status(400).json({ 'message': 'username and password are required' });
     data.setUsers([...data.users, newUser]);
     res.status(201).json(data.users);
 }

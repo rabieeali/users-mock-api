@@ -11,6 +11,7 @@ const { PORT } = process.env;
 app.use(cors(corsOptions));
 
 // middlewares
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // routes
@@ -19,4 +20,4 @@ app.use("/api/users", require("./routes/usersRoute"));
 // handling errors
 app.use(errorHandler);
 
-app.listen(PORT, () => console.log("server is running on port 3500"));
+app.listen(3500 || PORT, () => console.log("server is running on port 3500"));
