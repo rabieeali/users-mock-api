@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST API</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- SCRIPT -->
+    <script src="js/jquery.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/all.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body
+    style="height: 100vh"
+    class="d-flex flex-column justify-content-between"
+  >
+    <div>
+      <!-- header -->
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-warning" href="./">Users API</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarColor01"
+              aria-controls="navbarColor01"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/rabieeali/users-mock-api"
+                    >Github</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3" href="http://localhost:3500/api/users"
+                    >API</a
+                  >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./docs.html">Docs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./aboutme.html">About Me</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- end of header -->
+      <main class="container my-4">
+        <h1 class="text-capitalize">a Full <span class="text-info">CRUD</span> operation backend + demo frontend</h1>
+        <div class="shadow-lg p-3 my-4">
+          <h2 class="mb-4">How To Use?</h2>
+     
+            <ol class="text-capitalize d-flex flex-column gap-4">
+              <li>you should have node.js already installed on your machine</li>
+              <li>go to "Backed" folder and install all the dependencies with <samp class="bg-white p-2 rounded text-lowercase">npm install</samp></li>
+              <li>the server is by default run on port 3500</li>
+              <li>in order to avoid "CORS", in the directory "config/allowedOrigins.js" change your desired frontend origin (VSCode live-server's already set!)</li>
+              <li>start the server with <samp class="bg-white p-2 rounded text-lowercase">npm run dev</samp> to run the server by "Nodemon" or <samp class="bg-white p-2 rounded text-lowercase">npm run start</samp> by "node"</li>
+              <li>provided methods are GET, POST, PUT, DELETE</li>
+              <li>Checkout the API <a href="http://localhost:3500/api/users">here</a> </li>
+              <li>You Need a Live-Server to run the frontend functionalities</li>
+              <li>to see more great stuff follow me on <a href="https:github.com/rabieeali" target="_blank">github</a> and give me a star ⭐</li>
+              <ol>
+        </div>
+      </main>
+    </div>
+    <!-- footer -->
+    <footer class="text-center">
+      <hr style="width: 80%" class="m-auto" />
+      <p class="pt-2">Made With ❤️ And ☕ By Ali Rabiee</p>
+    </footer>
+    <!-- end of footer -->
+  </body>
+</html>

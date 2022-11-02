@@ -1,109 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST API</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- SCRIPT -->
+    <script src="js/jquery.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/all.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>REST API</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <!-- SCRIPT -->
-  <script src="js/jquery.js" defer></script>
-  <script src="js/bootstrap.min.js" defer></script>
-  <script src="js/app.js" defer></script>
-</head>
+  <style>
+    .cursor-pointer {
+      cursor: pointer;
+    }
+    .btn {
+      padding: 0.5rem 2rem;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+  </style>
 
-<style>
-  .btn {
-    padding: .25rem 1.5rem;
-    border-radius: 5px;
-    font-size: 9px;
-  }
-</style>
+  <body style="height:100vh" class="d-flex flex-column justify-content-between">
 
-<body>
-  <!-- header -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold text-warning" href=".">Users API</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="https:github.com/rabieeali">Github</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://localhost:3500/api/users">API</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Me</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <!-- end of header -->
-  <!-- main -->
-  <main class="container my-3">
-    <!-- cards -->
-    <section>
-      <div class="d-flex justify-content-between align-items-center">
-        <h1>List Of Users</h1>
-        <!-- Modal -->
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#adduser">
-          Add a New User
-        </button>
-        <div class="modal fade" id="adduser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form id="form" class="shadow-lg form-group p-4 rounded-4 mx-auto">
-                  <div id="error-msg" class="text-danger text-capitalize float-end"></div>
-                  <!-- username -->
-                  <label class="form-label" for="username">Enter Your Email</label>
-                  <input class=" form-control" id="username" type="email" placeholder="example@gmail.com">
-                  <br>
-                  <!-- password -->
-                  <label class="form-label" for="password">Enter a Password</label>
-                  <input class="form-control" id="password" type="password">
-                  <button class="btn btn-success d-block ms-auto mt-4" type="submit">Submit</button>
-                </form>
-              </div>
-
-            </div>
+    <div>
+    <!-- header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold text-warning" href="./">Users API</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/rabieeali/users-mock-api">Github</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="http://localhost:3500/api/users"
+                  >API</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./docs.html">Docs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./aboutme.html">About Me</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <!-- End Of Modal -->
-      </div>
-      <div id="table">
-        <table class="table table-hover">
-          <thead>
-            <tr class="text-center">
-              <th>ID</th>
-              <th>Username</th>
-              <th class="text-center" colspan="2">Actions</th>
-            </tr>
-          </thead>
-          <tbody id="table-data">
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <!-- end of cards -->
-  </main>
-  <!-- end of main -->
-
-</body>
-
+      </nav>
+    </header>
+    <!-- end of header -->
+    <!-- main -->
+    <main class="container my-4">
+      <section class="shadow-lg p-3 rounded-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <h1 class="my-2">List Of Users</h1>
+          <!-- Modal -->
+          <button
+            type="button"
+            class="my-2 btn btn-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#adduser"
+          >
+            Add a New User
+          </button>
+          <div
+            class="modal fade"
+            id="adduser"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Modal title
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form
+                    id="form"
+                    class="shadow-lg form-group p-4 rounded-4 mx-auto"
+                  >
+                    <div
+                      id="error-msg"
+                      class="text-danger text-capitalize float-end"
+                    ></div>
+                    <!-- username -->
+                    <label class="form-label" for="username"
+                      >Enter Your Email</label
+                    >
+                    <input
+                      class="form-control"
+                      id="username"
+                      type="email"
+                      placeholder="example@gmail.com"
+                    />
+                    <br />
+                    <!-- password -->
+                    <label class="form-label" for="password"
+                      >Enter a Password</label
+                    >
+                    <input class="form-control" id="password" type="password" />
+                    <button
+                      class="btn btn-success d-block ms-auto mt-4"
+                      type="submit"
+                    >
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Of Modal -->
+        </div>
+        <div id="table">
+          <table class="table table-hover">
+            <thead>
+              <tr class="text-center">
+                <th>ID</th>
+                <th>Username</th>
+                <th colspan="2">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="table-data"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+    <!-- end of main -->
+    <!-- footer -->
+    <footer class="text-center">
+      <hr style="width:80%" class="m-auto" />
+      <p class="pt-2">Made With ❤️ And ☕ By Ali Rabiee</p>
+    </footer>
+    <!-- end of footer -->
+  </body>
 </html>

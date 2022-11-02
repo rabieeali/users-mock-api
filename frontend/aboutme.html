@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST API</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- SCRIPT -->
+    <script src="js/jquery.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/all.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <style>
+    .cursor-pointer {
+      cursor: pointer;
+    }
+    .cursor-pointer:hover{
+       color:rgb(86, 117, 86) ;
+    }
+  </style>
+  <body
+    style="height: 100vh"
+    class="d-flex flex-column justify-content-between"
+  >
+    <div>
+      <!-- header -->
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-warning" href="./">Users API</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarColor01"
+              aria-controls="navbarColor01"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/rabieeali/users-mock-api"
+                    >Github</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link px-3"
+                    href="http://localhost:3500/api/users"
+                    >API</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./docs.html">Docs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./aboutme.html">About Me</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- end of header -->
+      <main class="container my-4">
+        <section class="shadow-lg p-4 rounded">
+        <h1 class="text-capitalize my-4">
+          Hi! my name is ali and I'm a full-Stack web developer.
+        </h1>
+        <h5 class="text-capitalize fw-bolder"><span class="text-info">fontend</span> technologies</h5>
+            <ul>
+                <li>Next.Js</li>
+                <li>React.Js</li>
+                <li>MUI, tailwindCSS, Chakra UI, Ant-Design, ...</li>
+            </ul>
+            <h5 class="text-capitalize fw-bolder"><span class="text-success">backend</span>  technologies</h5>
+            <ul>
+                <li>Node.Js</li>
+                <li>Express.Js</li>
+                <li>MongoDB</li>
+                <li>SQL</li>
+            </ul>
+            <div class="text-capitalize my-5">
+            <h5>contact me</h5>
+            <div class="flex fs-3">
+               <a href="https://github.com/rabieeali" target="_blank"><i class="fab fa-github mx-1 cursor-pointer"></i></a>
+               <a href="https://www.linkedin.com/in/alirbi" target="_blank"><i class="fab fa-linkedin mx-1 cursor-pointer"></i></a>
+            </div>
+        </div>
+    </section>
+      </main>
+    </div>
+    <!-- footer -->
+    <footer class="text-center">
+      <hr style="width: 80%" class="m-auto" />
+      <p class="pt-2">Made With ❤️ And ☕ By Ali Rabiee</p>
+    </footer>
+    <!-- end of footer -->
+  </body>
+</html>

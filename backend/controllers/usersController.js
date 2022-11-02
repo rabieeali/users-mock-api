@@ -21,8 +21,6 @@ const createNewUser = (req , res) => {
     const duplicate = data.users.find(person => person.username === username);
     if (duplicate) return res.status(409).json({"message":"There's Already a User With This Username"}); //Conflict 
 
-    
-
     const newUser = {
         id: data.users?.length ? data.users[data.users.length - 1].id + 1 : 1,
         username,

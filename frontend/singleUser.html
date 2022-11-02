@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST API</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- SCRIPT -->
+    <script src="js/all.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/jquery.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+
+  <style>
+    .cursor-pointer {
+      cursor: pointer;
+    }
+    .btn {
+      padding: 0.5rem 2rem;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+  </style>
+<body style="height:100vh" class="d-flex flex-column justify-content-between">
+    <div>
+    <!-- header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold text-warning" href=".">Users API</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/rabieeali/users-mock-api">Github</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="http://localhost:3500/api/users"
+                  >API</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./docs.html">Docs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./aboutme.html">About Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end of header -->
+    <main id="singleCard" class="container my-4"></main>
+</div>
+    <!-- footer -->
+    <footer class="text-center">
+        <hr style="width:80%" class="m-auto" />
+        <p class="pt-2">Made With ❤️ And ☕ By Ali Rabiee</p>
+      </footer>
+      <!-- end of footer -->
+  </body>
+</html>
